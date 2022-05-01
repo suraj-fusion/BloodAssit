@@ -1,0 +1,66 @@
+{% extends "layout.html" %}
+
+{% block title %}
+   Locate
+{% endblock %}
+
+
+
+
+
+{% block body %}
+
+
+<h1 class="text-center" style="font-family:didot">Locate Donors</h1>
+<hr>
+<br>
+
+<form action="/search" style="font-family:didot" >
+   Search State or union teritorry:<select name="searchstate">
+      {% for state in states %}
+      <option value="{{ state }}">{{ state }}</option>
+      {% endfor %}
+      </select>
+
+      Search Bloodtype:<select name="searchblood">
+         {% for bloodtype in bloodtypes %}
+         <option value="{{ bloodtype }}">{{ bloodtype }}</option>
+         {% endfor %}
+         </select>
+
+   <input type="submit" class="btn btn-danger" value="search">
+</form>
+
+<br>
+
+
+<table class="table" style="font-family:didot">
+<thead>
+<tr>
+   <th scope="col">Name</th>
+   <th scope="col">Age</th>
+   <th scope="col">City</th>
+   <th scope="col">State</th>
+   <th scope="col">Blood Type</th>
+   <th scope="col">Phone no.</th>
+</tr>
+</thead>
+<tbody>
+{% for i in info %}
+<tr scope="row">
+    <td>{{ i["Name"] }}</td>
+    <td>{{ i["Age"] }} </td>
+    <td>{{ i["City"] }} </td>
+    <td>{{ i["State"] }} </td>
+    <td>{{ i["Bloodtype"] }} </td>
+    <td>{{ i["Phoneno"] }} </td>
+</tr>
+{% endfor  %}
+</tbody>
+
+</table>
+
+
+
+
+{% endblock %}

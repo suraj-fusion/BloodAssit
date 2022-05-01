@@ -1,0 +1,50 @@
+{% extends "layout.html" %}
+
+{% block title %}
+   Register
+{% endblock %}
+
+
+{% block body %}
+
+
+<h1 class="text-center" style="font-family:didot">Register to Donate</h1>
+<hr>
+<div style="text-align:center">
+<p style="font-family:didot"><b>Before registering make sure you are fit to donate blood.Read<a href="/condition"> this </a> to know!!!!</b></p>
+</div>
+<div style="text-align:center">
+<form action="/register" method="post">
+<ul style="list-style-type:none; font-family:didot" >
+        <li> Name: <input type="text" name="Name" placeholder="Enter your Name" autocomplete="off" autofocus></li>
+        <br>
+        <li> Age: <input type="number" name="Age" placeholder="Enter your Age" autocomplete="off" ></li>
+        <br>
+        <li> City: <input type="text" name="City" placeholder="Enter your City" autocomplete="off"></li>
+        <br>
+        <li> State or Union teritorry: <select name="State">
+            {% for state in states %}
+            <option value="{{ state }}">{{ state }}</option>
+            {% endfor %}
+
+            </select>
+        </li>
+        <br>
+        <li> Blood Type: <select name="Bloodtype">
+            {% for bloodtype in bloodtypes %}
+            <option value="{{ bloodtype }}">{{ bloodtype }}</option>
+            {% endfor %}
+            </select>
+            </li>
+       <br>
+        <li> Phone No: <input type="number" name="Phoneno" placeholder="Enter your phone no." autocomplete="off"></li>
+        <br>
+        <li><button class="btn btn-danger btn-lg btn-block" type="submit">Register</button>
+
+    </ul>
+</form>
+
+</div>
+
+
+{% endblock %}

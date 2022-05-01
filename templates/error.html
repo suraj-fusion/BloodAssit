@@ -1,0 +1,32 @@
+{% extends "layout.html" %}
+
+{% block title %}
+   Error
+{% endblock %}
+
+
+
+
+
+{% block body %}
+
+{% if code==1 %}
+<h1 style="text-align:center;font-family:didot"> Error : Please Provide your Name</h1>
+{% elif code==2 %}
+<h1 style="text-align:center;font-family:didot"> Error : Please Enter your Age</h1>
+{% elif code==3 %}
+<h1 style="text-align:center;font-family:didot"> Error : Your age does not fall in prescribed age for blood donation</h1>
+{% elif code==4 %}
+<h1 style="text-align:center;font-family:didot"> Error : Please enter your City</h1>
+{% elif code==5 %}
+<h1 style="text-align:center;font-family:didot"> Error : Please Enter your phoneno</h1>
+{% elif code==6 %}
+<h1 style="text-align:center;font-family:didot"> Error : You have already registered</h1>
+{% elif code==7 %}
+<h1 style="text-align:center;font-family:didot"> You have been Deregistered</h1>
+{% elif code==8 %}
+<h1 style="text-align:center;font-family:didot"> You have not registered yet!</h1>
+{% endif %}
+
+
+{% endblock %}

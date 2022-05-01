@@ -1,0 +1,32 @@
+{% extends "layoutlogsign.html" %}
+
+{% block title %}
+   Signup
+{% endblock %}
+
+
+
+
+
+{% block body %}
+
+
+
+<div style="text-align:center;font-family:didot" >
+    <h1>SignUp</h1>
+    <hr>
+
+    <form action="/signup" method="post">
+        Username: <input type="text" name="username" placeholder="Choose a Username" autofocus autocomplete="off">
+        <br>
+        <br>
+        Password: <input type="password" name="password" placeholder="Choose a Password">
+        <br>
+        <br>
+        <input type="submit" class="btn btn-danger btn-lg " value="Signup">
+    </form>
+    </div>
+
+
+
+{% endblock %}

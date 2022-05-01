@@ -1,0 +1,40 @@
+{% extends "layout.html" %}
+
+{% block title %}
+   Locate
+{% endblock %}
+
+
+
+
+
+{% block body %}
+<div style="align:center">
+<table class="table">
+    <thead>
+    <tr>
+       <th scope="col">Name</th>
+       <th scope="col">Age</th>
+       <th scope="col">City</th>
+       <th scope="col">State</th>
+       <th scope="col">Blood Type</th>
+       <th scope="col">Phone no.</th>
+    </tr>
+    </thead>
+    <tbody>
+    {% for i in information %}
+    <tr scope="row">
+        <td>{{ i["Name"] }}</td>
+        <td>{{ i["Age"] }} </td>
+        <td>{{ i["City"] }} </td>
+        <td>{{ i["State"] }} </td>
+        <td>{{ i["Bloodtype"] }} </td>
+        <td>{{ i["Phoneno"] }} </td>
+    </tr>
+    {% endfor  %}
+    </tbody>
+
+    </table>
+</div>
+
+    {% endblock %}

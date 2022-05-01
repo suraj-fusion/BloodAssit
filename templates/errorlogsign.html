@@ -1,0 +1,30 @@
+{% extends "layoutlogsign.html" %}
+
+{% block title %}
+   Login
+{% endblock %}
+
+
+
+
+
+{% block body %}
+
+
+
+
+
+{% if code==1 %}
+<h1 style="text-align:center;font-family:didot"> Error : Please Enter a username</h1>
+{% elif code==2 %}
+<h1 style="text-align:center;font-family:didot"> Error : Please Provide a passoword </h1>
+{% elif code==3 %}
+<h1 style="text-align:center;font-family:didot"> Error : Account does not exist Signup and try again</h1>
+{% elif code==4%}
+<h1 style="text-align:center;font-family:didot"> Error : Username already exists choose a different username</h1>
+{% endif %}
+
+
+
+{% endblock %}
+
