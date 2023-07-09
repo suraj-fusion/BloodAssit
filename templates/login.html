@@ -1,36 +1,54 @@
-{% extends "layoutlogsign.html" %}
-
-{% block title %}
-   Login
-{% endblock %}
+{% extends "layoutlogsign.html" %} {% block title %} Login {% endblock %} {%
+block body %}
 
 
 
+<div style="text-align: center; font-family: didot">
+  <h1>Welcome to Blood Assit!</h1>
+  <hr />
+  <p>Do you know that India is yet to become a Blood sufficient country?</p>
+  <p>
+    Our mission is to change that by bridging the gap between blood donors and
+    people who are looking for blood
+  </p>
+
+  <p>
+    In case you want to contribute to this noble cause by becoming a blood donor
+    Signup to get started
+  </p>
+  
+
+  <p>
+    And in case you are looking for blood donors and want to access the database
+    you too can begin by Signing Up
+  </p>
+<hr/>
+</div>
 
 
-{% block body %}
 
 
-
-
-
-
-<div style="text-align:center;font-family:didot">
+<div style="text-align: center; font-family: didot">
     <h1>LogIn</h1>
-    <hr>
-
+    
+  
     <form action="/login" method="post">
-        Username: <input type="text" name="username" placeholder="Enter your Username" autofocus autocomplete="off"> 
-        <br>
-        <br>
-        Password: <input type="password" name="password" placeholder="Enter your Password">
-        <br>
-        <br>
-        <input type="submit" class="btn btn-danger btn-lg " value="Login">
+      Username:
+      <input
+        type="text"
+        name="username"
+        placeholder="Enter your Username"
+        autofocus
+        autocomplete="off"
+      />
+      <br />
+      <br />
+      Password:
+      <input type="password" name="password" placeholder="Enter your Password" />
+      <br />
+      <br />
+      <input type="submit" class="btn btn-danger btn-lg" value="Login" />
     </form>
-    </div>
-
-
-
+  </div>
 
 {% endblock %}
